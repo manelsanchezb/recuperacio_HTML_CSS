@@ -70,7 +70,6 @@ header h1 {
 
 /* Imatge targeta consola */
 .console-card img {
-    width: 100%;
     max-height: 180px;
     object-fit: contain;
     background-color: #111;
