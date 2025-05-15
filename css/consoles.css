@@ -1,0 +1,286 @@
+/* Estils generals del cos */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #1f1f1f, #3a3a3a);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Capçalera */
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 1em 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Títol capçalera */
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+}
+
+/* Secció fabricant */
+.fabricant {
+    padding: 2em;
+}
+
+/* Títol secció fabricant */
+.fabricant h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    border-bottom: 2px solid #444;
+    padding-bottom: 0.3em;
+    color: #4caf50;
+}
+
+/* Graella de consoles */
+.console-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2em;
+}
+
+/* Targeta consola */
+.console-card {
+    background-color: #2c2c2c;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecte hover targeta consola */
+.console-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Imatge targeta consola */
+.console-card img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+    background-color: #111;
+    padding: 1em;
+}
+
+/* Títol targeta consola */
+.console-card h3 {
+    margin: 0.5em 0 0.2em;
+    font-size: 1.4em;
+}
+
+/* Preu consola */
+.price {
+    color: #4caf50;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+/* Botó */
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 0.7em 1.5em;
+    border-radius: 8px;
+    margin-bottom: 1.5em;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecte hover botó */
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Peu de pàgina */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 1.5em 20px;
+    font-size: 0.8em;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: auto;
+}
+
+/* Icònes socials al footer */
+footer .social-icons {
+    margin-top: 10px;
+}
+
+/* Enllaços d'icones socials */
+footer .social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+/* Animació icones socials */
+footer .social-icons img.icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease;
+}
+
+/* Menú de navegació */
+nav {
+    display: flex;
+    text-align: right;
+    justify-content: right;
+}
+
+/* Enllaços de navegació */
+nav a {
+    color: #eee;
+    text-decoration: none;
+    padding: 0.4em 0.8em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    font-size: 0.85em;
+    margin-right: 4em;
+}
+
+/* Efecte hover en enllaços */
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Espai entre enllaços */
+nav a:not(:last-child) {
+    margin-right: 0.6em;
+}
+
+
+
+/* MEDIA QUERIES PER A DISSENY RESPONSIU */
+
+/* MÒBILS (≤600px) */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        padding: 1em 15px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    nav a {
+        margin: 5px 0;
+        font-size: 0.9em;
+    }
+
+    .fabricant {
+        padding: 1em;
+    }
+
+    .fabricant h2 {
+        font-size: 1.5em;
+    }
+
+    .console-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+    }
+
+    .console-card h3 {
+        font-size: 1.2em;
+    }
+
+    .price {
+        font-size: 1em;
+    }
+
+    .btn {
+        padding: 0.6em 1.2em;
+        font-size: 0.9em;
+    }
+
+    footer {
+        font-size: 0.75em;
+        padding: 1em 15px;
+    }
+
+    footer .social-icons img.icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* TABLETS (601px–1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    nav a {
+        font-size: 0.95em;
+    }
+
+    .console-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2em;
+    }
+
+    .fabricant {
+        padding: 1.5em;
+    }
+
+    .fabricant h2 {
+        font-size: 1.7em;
+    }
+
+    .btn {
+        font-size: 1em;
+    }
+
+    footer {
+        font-size: 0.85em;
+    }
+}
+
+/* DESKTOPS (>1024px) */
+@media (min-width: 1025px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    nav a {
+        font-size: 0.85em;
+    }
+
+    .console-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .btn {
+        font-size: 1em;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
